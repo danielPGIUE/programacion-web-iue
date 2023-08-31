@@ -1,55 +1,65 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
 }
 
-body{
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     background-color: black;
     color: aliceblue;
 }
 
 #container {
-    width: 70%;
+    width: 67%;
     margin: 0px auto;
 }
 
-header img{
+header img {
     float: left;
     width: 300px;
     height: auto;
     border-radius: 15px 157px 15px;
 }
 
-#informacion{
+#informacion {
+    margin-top: 60px;
     padding-left: 350px;
     padding-top: 10px;
 }
 
 header h1 {
-    margin-top: 100px; /* Espaciado superior */
-    font-size: 2.5rem; /* Tamaño de fuente */
+    margin-top: 100px;
+    /* Espaciado superior */
+    font-size: 2.5rem;
+    /* Tamaño de fuente */
 }
 
 header h2 {
-    margin-top: 10px; /* Espaciado superior */
+    margin-top: 10px;
+    /* Espaciado superior */
 }
 
-.clearfix{
+.clearfix {
     clear: both;
 }
 
 .direcciones {
     display: flex;
-    margin-top: 120px;
+    margin-top: 60px;
     justify-content: space-around;
 }
 
-p{
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+p {
     margin-top: 40px;
     font-size: 1.4rem;
 }
 
-#content{
+#content {
     display: flex;
     justify-content: space-around;
     margin-top: 30px;
@@ -59,7 +69,38 @@ p{
 #content li {
     margin-bottom: 10px;
 }
-footer{
+
+footer {
     display: flex;
     justify-content: space-between;
+}
+
+.github,
+.neocities {
+    display: flex;
+    line-height: 2;
+    justify-content: space-between;
+}
+
+#icon_github,
+#icon_browser {
+    margin-right: 20px;
+    color: #e6ff00;
+    font-size: 38px;
+}
+
+#icon_arroba {
+    color: #e6ff00;
+}
+
+.animacion_palabras {
+    display: flex;
+    margin-top: 40px;
+    color: #e6ff00;
+    font-size: 24px;
+}
+
+hr {
+    margin-top: 1px;
+    opacity: .2;
 }

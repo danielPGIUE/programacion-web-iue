@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://kit.fontawesome.com/ca7993bf0a.js" crossorigin="anonymous"></script>
     <title>Portafolio Web IUE</title>
 </head>
 <body>
@@ -15,11 +16,25 @@
             <section id="informacion">
                 <div>
                     <h1>DANIEL PULGARIN GRACIANO</h1>
-                    <h2>email: dpulgarin@correo.iue.edu.co</h2>
+                    <a target="_blank" href="mailto:dpulgarin@correo.iue.edu.co">
+                        <h2>dpulgarin<i id="icon_arroba" class="fa-solid fa-at"></i>correo.iue.edu.co</h2>
+                    </a>
                 </div>
+                <div class="animacion_palabras">
+                    <h2 id="word"></h2>
+                    <h2 class="cursor">|</h2>
+                  </div>
+                <hr>
                 <div class="direcciones">
-                    <h3>github: danielPGIUE</h3>
-                    <h3>neocities: danielpgiue.neocities.org</h3>
+                    <a class="github" target="_blank" href="https://github.com/danielPGIUE/programacion-web-iue">
+                        <i id="icon_github" class="fa-brands fa-github"></i>
+                        <h3>github: danielPGIUE</h3>
+                    </a>
+                    <a  class="neocities" href="danielpgiue.neocities.org">
+                        <i id="icon_browser" class="fa-regular fa-window-maximize"></i>
+                        <h3>neocities: danielpgiue.neocities.org</h3>
+                    </a>
+                    
                 </div>
             </section>
         </header>
@@ -27,15 +42,10 @@
         <section>
             <article>
                 <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                    Magnam, nulla! Voluptatum, pariatur aliquam. Id labore impedit similique nesciunt eveniet voluptate doloribus a reprehenderit, consequuntur, 
-                    minus sint tempore repudiandae beatae ipsum.
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                    Magnam, nulla! Voluptatum, pariatur aliquam. Id labore impedit similique nesciunt eveniet voluptate doloribus a reprehenderit, consequuntur, 
-                    minus sint tempore repudiandae beatae ipsum.
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                    Magnam, nulla! Voluptatum, pariatur aliquam. Id labore impedit similique nesciunt eveniet voluptate doloribus a reprehenderit, consequuntur, 
-                    minus sint tempore repudiandae beatae ipsum.
+                    Soy un desarrollador creativo para proyectos interactivos que generalmente son aplicaciones de sitios web creativos. 
+                    Paso la mayor parte del tiempo codificando proyectos destacados o estudiando nuevas tecnologías. para mejorar mi stack de desarrollo. 
+                    Desarrollo diseños atractivos que cobran vida mediante transiciones y animaciones que se adaptan a mis clientes, utilizando las tecnologías más 
+                    sofisticadas disponibles en la actualidad para sitios web y aplicaciones totalmente interactivos y responsivos.
                 </p>
             </article>
         </section>
@@ -85,6 +95,8 @@
             <article><p>PROGRAMACIÓN WEB</p></article>
             <article><p>IUE - 2023</p></article>
         </footer>
+        
+          <script src="assets/js/script.js"></script>
     </div>
 </body>
 </html>
