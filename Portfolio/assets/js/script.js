@@ -33,3 +33,47 @@ function animateTyping() {
 }
 
 animateTyping();
+
+document.addEventListener("DOMContentLoaded", function () {
+  const carousel = document.querySelector(".carousel");
+  const carouselItems = document.querySelectorAll(".carousel-item1");
+  const prevButton = document.getElementById("prevButton");
+  const nextButton = document.getElementById("nextButton");
+  let currentIndex = 0;
+
+  // Función para mostrar la diapositiva actual
+  function showSlide() {
+      const translateX = -currentIndex * 50; // 50% por cada elemento
+      carousel.style.transform = `translateX(${translateX}%)`;
+  }
+
+  // Función para avanzar al siguiente slide
+  function nextSlide() {
+      if (currentIndex < carouselItems.length - 1) {
+          currentIndex++;
+          showSlide();
+      } else {
+          currentIndex = 0;
+          showSlide();
+      }
+  }
+
+  // Event listener para el botón "Anterior"
+  prevButton.addEventListener("click", function () {
+      if (currentIndex > 0) {
+          currentIndex--;
+          showSlide();
+      }
+  });
+
+  // Event listener para el botón "Siguiente"
+  nextButton.addEventListener("click", function () {
+      nextSlide();
+  });
+
+  // Cambiar automáticamente cada 10 segundos
+  setInterval(nextSlide, 5000);
+
+  // Mostrar la primera diapositiva al cargar la página
+  showSlide();
+});

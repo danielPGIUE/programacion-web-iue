@@ -57,10 +57,14 @@ a {
 p {
     margin-top: 40px;
     font-size: 1.4rem;
+    color: #FFFFFF;
+    opacity: 0.8;
+    text-align: left;
 }
 
 #content {
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     margin-top: 30px;
     font-size: 1.4rem;
@@ -103,4 +107,90 @@ footer {
 hr {
     margin-top: 1px;
     opacity: .2;
+}
+
+.linea {
+    font-size: 28px;
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+    letter-spacing: -1px;
+    line-height: 30px;
+}
+
+.linea::after{
+    background: #e6ff00;
+    content: '';
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    z-index: -1;
+}
+
+
+
+footer{
+    border: 1px solid red;
+}
+
+article{
+    text-align: center;
+}
+/* Estilos para el carrusel */
+.carousel-container {
+    overflow: hidden;
+    width: 300px; /* Ancho del carrusel */
+    margin: 0 auto;
+    position: relative; /* Agregamos posición relativa para que los botones se coloquen correctamente */
+}
+
+.carousel {
+    display: flex;
+    width: 200%; /* Ajusta el ancho al tamaño de los elementos */
+    transition: transform 0.5s ease; /* Agregamos una transición suave para el desplazamiento */
+}
+
+.carousel-item1,
+.carousel-item2,
+.carousel-item3,
+.carousel-item4 {
+    flex: 0 0 50%; /* Muestra 2 elementos a la vez */
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño real del elemento */
+}
+
+/* Estilos opcionales para el contenido dentro de los elementos del carrusel */
+.contenido {
+    padding: 20px;
+    height: 100%; /* Asegura que todos los elementos tengan la misma altura */
+}
+
+/* Estilos para los botones de navegación */
+#prevButton, #nextButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+.nav-button {
+    font-size: 24px; /* Tamaño del ícono */
+    background: none;
+    border: none;
+    color: #e6ff00;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+}
+#prevButton {
+    left: 10px;
+}
+
+#nextButton {
+    right: 10px;
 }

@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/styles.css">
     <script src="https://kit.fontawesome.com/ca7993bf0a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <title>Portafolio Web IUE</title>
 </head>
+
 <body>
     <div id="container">
         <header>
@@ -23,18 +26,18 @@
                 <div class="animacion_palabras">
                     <h2 id="word"></h2>
                     <h2 class="cursor">|</h2>
-                  </div>
+                </div>
                 <hr>
                 <div class="direcciones">
                     <a class="github" target="_blank" href="https://github.com/danielPGIUE/programacion-web-iue">
                         <i id="icon_github" class="fa-brands fa-github"></i>
                         <h3>github: danielPGIUE</h3>
                     </a>
-                    <a  class="neocities" href="danielpgiue.neocities.org">
+                    <a class="neocities" href="danielpgiue.neocities.org">
                         <i id="icon_browser" class="fa-regular fa-window-maximize"></i>
                         <h3>neocities: danielpgiue.neocities.org</h3>
                     </a>
-                    
+
                 </div>
             </section>
         </header>
@@ -42,61 +45,168 @@
         <section>
             <article>
                 <p>
-                    Soy un desarrollador creativo para proyectos interactivos que generalmente son aplicaciones de sitios web creativos. 
-                    Paso la mayor parte del tiempo codificando proyectos destacados o estudiando nuevas tecnologías. para mejorar mi stack de desarrollo. 
-                    Desarrollo diseños atractivos que cobran vida mediante transiciones y animaciones que se adaptan a mis clientes, utilizando las tecnologías más 
-                    sofisticadas disponibles en la actualidad para sitios web y aplicaciones totalmente interactivos y responsivos.
+                    Soy un desarrollador creativo para proyectos interactivos que generalmente son aplicaciones de
+                    sitios web creativos.
+                    Paso la mayor parte del tiempo codificando proyectos destacados o estudiando nuevas tecnologías.
+                    para mejorar mi stack de desarrollo.
+                    Desarrollo diseños atractivos que cobran vida mediante transiciones y animaciones que se adaptan a
+                    mis clientes, utilizando las tecnologías más
+                    sofisticadas disponibles en la actualidad para sitios web y aplicaciones totalmente interactivos y
+                    responsivos.
                 </p>
             </article>
         </section>
         <section id="content">
             <article>
-                <h2>Diseños</h2>
-                <ul>
-                    <li>Diseño 1: <a href="https://www.figma.com/proto/CyyP8tsUruV6JOJRUTdoTv/CV?type=design&node-id=14-46&t=vy9cXZuUA5vCZyyz-1&scaling=min-zoom&page-id=14%3A45&mode=design">Portafolio</a></li>
-                    <li>Diseño 2: <a href="https://www.figma.com/proto/CyyP8tsUruV6JOJRUTdoTv/CV?type=design&node-id=2-41&t=v5gZEce4iSzG2Dae-1&scaling=min-zoom&page-id=1%3A2&mode=design">Hoja de vida</a></li>
-                    <li>Diseño 3: <a href="https://www.figma.com/proto/CyyP8tsUruV6JOJRUTdoTv/CV?type=design&node-id=88-3&t=eLJaI1d0GoaVbJ8k-1&scaling=min-zoom&page-id=88%3A2&mode=design">Deportes Extremos</a></li>
-                    <li>Diseño 4</li>
-                    <li>Diseño 5</li>
-                </ul>
+                <h2 class="linea">Diseños</h2>
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-item1">
+                            <div class="contenido">
+                                <h5>Diseño 1</h5>
+                                <a target="_blank"
+                                    href="https://www.figma.com/proto/CyyP8tsUruV6JOJRUTdoTv/CV?type=design&node-id=14-46&t=vy9cXZuUA5vCZyyz-1&scaling=min-zoom&page-id=14%3A45&mode=design"><span>Portafolio</span></a>
+                            </div>
+                        </div>
+                        <div class="carousel-item1">
+                            <div class="contenido">
+                                <h5>Diseño 2</h5>
+                                <a target="_blank"
+                                    href="https://www.figma.com/proto/CyyP8tsUruV6JOJRUTdoTv/CV?type=design&node-id=2-41&t=v5gZEce4iSzG2Dae-1&scaling=min-zoom&page-id=1%3A2&mode=design"><span>Hoja
+                                        de vida</span></a>
+                            </div>
+                        </div>
+                        <div class="carousel-item1">
+                            <div class="contenido">
+                                <h5>Diseño 3</h5>
+                                <a target="_blank"
+                                    href="https://www.figma.com/proto/CyyP8tsUruV6JOJRUTdoTv/CV?type=design&node-id=88-3&t=eLJaI1d0GoaVbJ8k-1&scaling=min-zoom&page-id=88%3A2&mode=design"><span>Deportes
+                                        Extremos</span></a>
+                            </div>
+                        </div>
+                        <div class="carousel-item1">
+                            <div class="contenido">
+                                <h5>Diseño 4</h5>
+                                <span>Descripción 4</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="prevButton" class="nav-button"><i class="fas fa-chevron-left"></i></button>
+                    <button id="nextButton" class="nav-button"><i class="fas fa-chevron-right"></i></button>
+                </div>
             </article>
             <article>
-                <h2>Consultas</h2>
-                <ul>
-                    <li>Consulta 1</li>
-                    <li>Consulta 2</li>
-                    <li>Consulta 3</li>
-                    <li>Consulta 4</li>
-                    <li>Consulta 5</li>
-                </ul>
+                <h2 class="linea">Consultas</h2>
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-item2">
+                            <div class="contenido">
+                                <h5>Consulta 1</h5>
+                                <span>Descripción 1</span>
+                            </div>
+                        </div>
+                        <div class="carousel-item2">
+                            <div class="contenido">
+                                <h5>Consulta 2</h5>
+                                <span>Descripción 2</span>
+                            </div>
+                        </div>
+                        <div class="carousel-item2">
+                            <div class="contenido">
+                                <h5>Consulta 3</h5>
+                                <span>Descripción 3</span>
+                            </div>
+                        </div>
+                        <div class="carousel-item2">
+                            <div class="contenido">
+                                <h5>Consulta 4</h5>
+                                <span>Descripción 4</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="prevButton" class="nav-button"><i class="fas fa-chevron-left"></i></button>
+                    <button id="nextButton" class="nav-button"><i class="fas fa-chevron-right"></i></button>
+                </div>
             </article>
             <article>
-                <h2>Talleres</h2>
-                <ul>
-                    <li>Taller 1: <a href="components/Talleres/Hoja de vida/index.html">Hoja de vida</a> </li>
-                    <li>Taller 2</li>
-                    <li>Taller 3</li>
-                    <li>Taller 4</li>
-                    <li>Taller 5</li>
-                </ul>
+                <h2 class="linea">Talleres</h2>
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-item3">
+                            <div class="contenido">
+                                <h5>Taller 1</h5>
+                                <a href="components/Talleres/Hoja de vida/index.html"><span>Hoja de vida</span></a>
+                            </div>
+                        </div>
+                        <div class="carousel-item3">
+                            <div class="contenido">
+                                <h5>Taller 2</h5>
+                                <span>Descripción 2</span>
+                            </div>
+                        </div>
+                        <div class="carousel-item3">
+                            <div class="contenido">
+                                <h5>Taller 3</h5>
+                                <span>Descripción 3</span>
+                            </div>
+                        </div>
+                        <div class="carousel-item3">
+                            <div class="contenido">
+                                <h5>Taller 4</h5>
+                                <span>Descripción 4</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="prevButton" class="nav-button"><i class="fas fa-chevron-left"></i></button>
+                    <button id="nextButton" class="nav-button"><i class="fas fa-chevron-right"></i></button>
+                </div>
             </article>
             <article>
-                <h2>Retos</h2>
-                <ul>
-                    <li>Reto 1</li>
-                    <li>Reto 2</li>
-                    <li>Reto 3</li>
-                    <li>Reto 4</li>
-                    <li>Reto 5</li>
-                </ul>
+                <h2 class="linea">Retos</h2>
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-item4">
+                            <div class="contenido">
+                                <h5>Reto 1</h5>
+                                <span>Descripción 1</span>
+                            </div>
+                        </div>
+                        <div class="carousel-item4">
+                            <div class="contenido">
+                                <h5>Reto 2</h5>
+                                <span>Descripción 2</span>
+                            </div>
+                        </div>
+                        <div class="carousel-item4">
+                            <div class="contenido">
+                                <h5>Reto 3</h5>
+                                <span>Descripción 3</span>
+                            </div>
+                        </div>
+                        <div class="carousel-item4">
+                            <div class="contenido">
+                                <h5>Reto 4</h5>
+                                <span>Descripción 4</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="prevButton" class="nav-button"><i class="fas fa-chevron-left"></i></button>
+                    <button id="nextButton" class="nav-button"><i class="fas fa-chevron-right"></i></button>
+                </div>
             </article>
         </section>
+
         <footer>
-            <article><p>PROGRAMACIÓN WEB</p></article>
-            <article><p>IUE - 2023</p></article>
+            <article>
+                <p>PROGRAMACIÓN WEB</p>
+            </article>
+            <article>
+                <p>IUE - 2023</p>
+            </article>
         </footer>
-        
-          <script src="assets/js/script.js"></script>
+
+        <script src="assets/js/script.js"></script>
     </div>
 </body>
+
 </html>
