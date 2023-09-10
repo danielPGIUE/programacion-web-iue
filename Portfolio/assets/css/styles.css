@@ -146,7 +146,10 @@ article{
     position: relative; /* Agregamos posición relativa para que los botones se coloquen correctamente */
 }
 
-.carousel {
+.carousel1,
+.carousel2,
+.carousel3,
+.carousel4 {
     display: flex;
     width: 200%; /* Ajusta el ancho al tamaño de los elementos */
     transition: transform 0.5s ease; /* Agregamos una transición suave para el desplazamiento */
@@ -169,7 +172,14 @@ article{
 }
 
 /* Estilos para los botones de navegación */
-#prevButton, #nextButton {
+#prevButton1, 
+#nextButton1,
+#prevButton2, 
+#nextButton2,
+#prevButton3, 
+#nextButton3,
+#prevButton4, 
+#nextButton4 {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -187,10 +197,16 @@ article{
     outline: none;
     padding: 0;
 }
-#prevButton {
+#prevButton1,
+#prevButton2,
+#prevButton3,
+#prevButton4 {
     left: 10px;
 }
 
-#nextButton {
+#nextButton1,
+#nextButton2,
+#nextButton3,
+#nextButton4 {
     right: 10px;
 }
