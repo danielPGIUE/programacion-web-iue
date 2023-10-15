@@ -60,3 +60,30 @@ footer{
     display: flex;
     justify-content: space-between;
 }
+
+.right{
+    background-color: #797777;
+    color: white;
+    font-size: 1.5rem;
+}
+
+
+@media screen and (max-width: 850px) {
+    #content {
+        display: block;
+        flex-direction: row;
+        justify-content: initial;
+        margin-top: 44px;
+        font-size: 1.4rem;
+    }
+    header img{
+        float: none;
+    }
+    #informacion {
+        display: block;
+        margin: initial;
+        padding: initial;
+    }
+
+   
+}
