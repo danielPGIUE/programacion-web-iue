@@ -19,6 +19,7 @@ header img {
     width: 300px;
     height: auto;
     border-radius: 15px 157px 15px;
+    opacity: 0.7;
 }
 
 #informacion {
@@ -29,14 +30,12 @@ header img {
 
 header h1 {
     margin-top: 100px;
-    /* Espaciado superior */
     font-size: 2.5rem;
-    /* Tamaño de fuente */
+
 }
 
 header h2 {
     margin-top: 10px;
-    /* Espaciado superior */
 }
 
 .clearfix {
@@ -56,17 +55,18 @@ a {
 
 p {
     margin-top: 40px;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: #FFFFFF;
     opacity: 0.8;
     text-align: left;
+    line-height: 2em;
 }
 
 #content {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-top: 30px;
+    margin-top: 44px;
     font-size: 1.4rem;
 }
 
@@ -74,9 +74,19 @@ p {
     margin-bottom: 10px;
 }
 
+.contenido span {
+    opacity: 0.7;
+}
+
 footer {
     display: flex;
     justify-content: space-between;
+    line-height: 2.1rem;
+}
+
+footer p {
+
+    font-size: .7rem;
 }
 
 .github,
@@ -118,7 +128,7 @@ hr {
     line-height: 30px;
 }
 
-.linea::after{
+.linea::after {
     background: #e6ff00;
     content: '';
     width: 100%;
@@ -129,21 +139,18 @@ hr {
     z-index: -1;
 }
 
-
-
-footer{
-    border: 1px solid red;
-}
-
-article{
+article {
     text-align: center;
 }
+
 /* Estilos para el carrusel */
 .carousel-container {
     overflow: hidden;
-    width: 300px; /* Ancho del carrusel */
+    width: 300px;
+    /* Ancho del carrusel */
     margin: 0 auto;
-    position: relative; /* Agregamos posición relativa para que los botones se coloquen correctamente */
+    position: relative;
+    /* Agregamos posición relativa para que los botones se coloquen correctamente */
 }
 
 .carousel1,
@@ -151,34 +158,39 @@ article{
 .carousel3,
 .carousel4 {
     display: flex;
-    width: 200%; /* Ajusta el ancho al tamaño de los elementos */
-    transition: transform 0.5s ease; /* Agregamos una transición suave para el desplazamiento */
+    width: 200%;
+    /* Ajusta el ancho al tamaño de los elementos */
+    transition: transform 0.5s ease;
+    /* Agregamos una transición suave para el desplazamiento */
 }
 
 .carousel-item1,
 .carousel-item2,
 .carousel-item3,
 .carousel-item4 {
-    flex: 0 0 50%; /* Muestra 2 elementos a la vez */
+    flex: 0 0 50%;
+    /* Muestra 2 elementos a la vez */
     padding: 10px;
     text-align: center;
-    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño real del elemento */
+    box-sizing: border-box;
+    /* Asegura que el padding no afecte el tamaño real del elemento */
 }
 
 /* Estilos opcionales para el contenido dentro de los elementos del carrusel */
 .contenido {
     padding: 20px;
-    height: 100%; /* Asegura que todos los elementos tengan la misma altura */
+    height: 100%;
+    /* Asegura que todos los elementos tengan la misma altura */
 }
 
 /* Estilos para los botones de navegación */
-#prevButton1, 
+#prevButton1,
 #nextButton1,
-#prevButton2, 
+#prevButton2,
 #nextButton2,
-#prevButton3, 
+#prevButton3,
 #nextButton3,
-#prevButton4, 
+#prevButton4,
 #nextButton4 {
     position: absolute;
     top: 50%;
@@ -188,8 +200,10 @@ article{
     cursor: pointer;
     outline: none;
 }
+
 .nav-button {
-    font-size: 24px; /* Tamaño del ícono */
+    font-size: 24px;
+    /* Tamaño del ícono */
     background: none;
     border: none;
     color: #e6ff00;
@@ -197,6 +211,7 @@ article{
     outline: none;
     padding: 0;
 }
+
 #prevButton1,
 #prevButton2,
 #prevButton3,
@@ -209,4 +224,72 @@ article{
 #nextButton3,
 #nextButton4 {
     right: 10px;
+}
+
+@media screen and (min-width: 850px) and (max-width: 1120px) {
+    #content {
+        display: block;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 44px;
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (min-width: 551px) and (max-width: 850px) {
+    #content {
+        display: block;
+        flex-direction: row;
+        justify-content: initial;
+        margin-top: 44px;
+        font-size: 1.4rem;
+    }
+
+    .direcciones {
+        justify-content: initial;
+    }
+
+    header {
+        padding: initial;
+        margin: initial;
+    }
+
+    header img {
+        float: none;
+    }
+
+    #informacion {
+        display: block;
+        margin: initial;
+        padding: initial;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #content {
+        display: block;
+        flex-direction: row;
+        justify-content: initial;
+        margin-top: 44px;
+        font-size: 1.4rem;
+    }
+
+    .direcciones {
+        display: block;
+    }
+
+    header {
+        padding: initial;
+        margin: initial;
+    }
+
+    header img {
+        float: none;
+    }
+
+    #informacion {
+        display: block;
+        margin: initial;
+        padding: initial;
+    }
 }
