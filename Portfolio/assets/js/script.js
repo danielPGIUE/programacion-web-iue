@@ -40,7 +40,6 @@ function animateTyping() {
 animateTyping();
 
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("11");
   const carousel1 = document.querySelector(".carousel1");
   const carousel2 = document.querySelector(".carousel2");
   const carousel3 = document.querySelector(".carousel3");
