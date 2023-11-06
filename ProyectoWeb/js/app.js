@@ -1,5 +1,5 @@
-async function getData() {
-    const url = 'https://steam2.p.rapidapi.com/search/Counter/page/1';
+async function getDetails(id) {
+    const url = 'https://steam2.p.rapidapi.com/appDetail/'+id;
     const response = await fetch(url, {
         method: 'GET',
         headers: {
@@ -10,28 +10,32 @@ async function getData() {
     return response.json();
 }
 
-let juegos = [];
-const tablaResultados = document.getElementById("resultados");
-getData()
-    .then(data => {
-        console.log(data);
-        juegos = data;
-        let count = 0;
+// Función para obtener el valor del parámetro de la URL
+function obtenerParametro(id) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(id);
+}
 
-        data.forEach(item => {
+// Obtener el valor del parámetro "parametro" de la URL
+const parametro = obtenerParametro('gameId');
+const parametro2 = obtenerParametro('gameUrl');
 
-
-            if (count < 8) {
-                const divElement = document.createElement("div");
-                divElement.classList.add('game');
-                divElement.innerHTML = `
-                <h5>${item.title}</h5>
-                <h5><a href="${item.url}"><img src="${item.imgUrl}" alt="Imagen" width="100"><a/></h5>
-                <h5>${item.price}</h5>
-            `;
-                tablaResultados.appendChild(divElement);
-                count++;
-            }
-        });
+if (parametro &&  parametro2) {
+    const juegoDetalles = document.getElementById('parametroMostrado');
+    getDetails(parametro)
+    .then(juego => {
+        console.log(juego);
+        const juegoElement = document.createElement("div");
+            juegoElement.classList.add('game');
+            juegoElement.innerHTML = `
+                <h5>${juego.title}</h5>
+                <h5><a href="${parametro2}"><img src="${juego.imgUrl}" alt="Imagen" width="100"><a/></h5>
+                <h5>${juego.description}</h5>
+                <h5>${juego.price}</h5>
+                <a href="${parametro2}">Comprar<a/>
+        `;
+        juegoDetalles.appendChild(juegoElement);
     })
     .catch(error => console.error('Error al cargar los datos de la API: ', error));
+}
+

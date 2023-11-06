@@ -33,7 +33,7 @@ const busquedaInput = document.getElementById('busqueda'); // Agregamos una refe
 const retrocederBtn = document.getElementById('retroceder');
 let paginaActual = 1;
 const juegosPorPagina = 5;
-
+console.log(paginaActual);
 function mostrarJuegosEnPagina() {
     const inicio = (paginaActual - 1) * juegosPorPagina;
     const fin = inicio + juegosPorPagina;
@@ -54,6 +54,8 @@ function mostrarJuegosEnPagina() {
     // Si no hay más juegos para cargar, ocultar el botón "Cargar Más"
     if (inicio + juegosPorPagina >= juegos.length) {
         cargarMasBtn.style.display = 'none';
+    }else{
+        cargarMasBtn.style.display = 'block';
     }
 
     const busqueda = busquedaInput.value.toLowerCase();
@@ -71,15 +73,18 @@ function mostrarJuegosEnPagina() {
     });
 }
 function actualizarBotonDeRetroceso() {
+    
     if (paginaActual > 1) {
         retrocederBtn.style.display = 'block';
     } else {
         retrocederBtn.style.display = 'none';
     }
+
 }
 function cargarMasJuegos() {
     paginaActual++;
     mostrarJuegosEnPagina();
+    actualizarBotonDeRetroceso();
 }
 // Evento para retroceder una página
 retrocederBtn.addEventListener('click', () => {
