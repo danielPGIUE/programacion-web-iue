@@ -61,6 +61,53 @@ footer .contenedor{
     color: #333;
     text-decoration: none;
 }
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    width: 300px;
+    display: inline-block;
+    background-color: #f9f9f9;
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.description {
+    font-size: 16px;
+    text-align: left;
+}
+
+.price {
+    font-size: 18px;
+    color: #0077cc;
+    margin-top: 10px;
+}
+
+.buy-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.buy-button:hover {
+    background-color: #0055aa;
+}
+hr{
+    margin: 20px;
+}
 @media(min-width:760px){
     .sociales{
         width: auto;

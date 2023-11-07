@@ -28,11 +28,14 @@ if (parametro &&  parametro2) {
         const juegoElement = document.createElement("div");
             juegoElement.classList.add('game');
             juegoElement.innerHTML = `
-                <h5>${juego.title}</h5>
-                <h5><a href="${parametro2}"><img src="${juego.imgUrl}" alt="Imagen" width="100"><a/></h5>
-                <h5>${juego.description}</h5>
-                <h5>${juego.price}</h5>
-                <a href="${parametro2}">Comprar<a/>
+            <div class="card">
+                <h2>${juego.title}</h2>
+                <a href="${parametro2}"><img src="${juego.imgUrl}" alt="Imagen" width="100"><a/>
+                <hr>
+                <p class="description">${juego.description}</p>
+                <h3 class="price">${juego.price}</h3>
+                <a href="${parametro2}" class="buy-button">Comprar<a/>
+            </div>
         `;
         juegoDetalles.appendChild(juegoElement);
     })
